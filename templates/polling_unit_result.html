@@ -1,0 +1,18 @@
+<form method="POST" action="{% url 'polling_unit_result' %}">
+    {% csrf_token %}
+    
+    <!-- Party -->
+    <div>
+      <label for="id_party">Party:</label>
+      {{ form.party }}
+    </div>
+    
+    <!-- Result -->
+    <div>
+      <label for="id_result">Result:</label>
+      {{ form.result }}
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
